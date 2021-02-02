@@ -1,0 +1,385 @@
+@import url(https://fonts.googleapis.com/css2?family=Abel&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,200&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.welcome {
+  position: relative;
+  background: #202020;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+.container .header {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding-top: 30px;
+  position: -webkit-sticky;
+  position: sticky;
+  justify-content: space-between;
+}
+.container .header .logo {
+  z-index: 1002;
+  display: block;
+  background-color: #fff;
+  width: 130px;
+  height: 40px;
+}
+.container .header .navbar {
+  padding-right: 15%;
+  display: flex;
+  align-items: flex-end;
+  z-index: 1000;
+}
+.container .header .navbar a {
+  align-items: center;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 12px;
+  line-height: 140.62%;
+  display: block;
+  margin: 0 15px;
+  color: #fff;
+  width: 50px;
+  text-decoration: none;
+}
+.container .main .first {
+  display: block;
+  height: 720px;
+}
+.container .main .first .context {
+  width: 60%;
+  margin: auto;
+  margin-top: 150px;
+  vertical-align: center;
+}
+.container .main .first .context h1 {
+  text-align: center;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-style: bold;
+  color: #fff;
+  z-index: 1000;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 102px;
+  letter-spacing: 12px;
+}
+.container .main .first .context h1 span {
+  color: #B0806B;
+}
+.container .main .first .context p {
+  margin-top: 30px;
+  text-align: center;
+  font-style: italic;
+  font-size: 40px;
+  color: #fff;
+}
+.container .main .first .context p::after {
+  content: "";
+  display: block;
+  margin-top: 20px;
+  border-bottom: 3px solid #fff;
+}
+.container .main .second {
+  padding-top: 2rem;
+  height: 650px;
+  border-top: 4px solid #fff;
+}
+.container .main .second h1 {
+  color: #D4C17F;
+  font-size: 34px;
+}
+.container .main .second div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .main .second div .content {
+  width: 50%;
+  display: block;
+}
+.container .main .second div .content li {
+  color: #fff;
+  margin: 20px;
+  display: block;
+}
+.container .main .second div .image img {
+  width: 500px;
+}
+.container .main .third {
+  padding-top: 30px;
+  border-top: 4px solid #fff;
+}
+.container .main .third h1 {
+  color: #D4C17F;
+  font-size: 34px;
+}
+.container .main .third div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.container .main .third div div {
+  background-color: #fff;
+  width: 300px;
+  height: 470px;
+  margin-top: 50px;
+  filter: drop-shadow(-4px -4px 4px rgba(95, 95, 95, 0.25));
+  border-radius: 14px;
+  background-color: #222222;
+}
+.container .main .third div div h3 {
+  color: #fff;
+  text-align: center;
+}
+.container .main .third div div p {
+  color: white;
+  padding: 20px;
+}
+.container .main .third div div img {
+  margin: 4%;
+  color: antiquewhite;
+  width: 96%;
+  display: block;
+  justify-content: center;
+  height: 150px;
+}
+.container .main .third div div button {
+  width: 200px;
+  height: 30px;
+  display: block;
+  align-content: center;
+  margin: auto;
+  background-color: #D4C17F;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+}
+.container .main .third div div:hover {
+  transform: translateX(36px);
+  transition: 0.3s;
+  filter: drop-shadow(-40px -4px 4px rgba(255, 255, 255, 0.1));
+}
+.container .main .fourth {
+  margin-top: 100px;
+  border-top: 4px solid #fff;
+}
+.container .main .fourth h1 {
+  color: #D4C17F;
+  font-size: 34px;
+}
+.container .main .fourth div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 96%;
+  justify-content: space-between;
+  margin: auto;
+}
+.container .main .fourth div a {
+  width: 320px;
+  height: 370px;
+  margin-top: 100px;
+  text-decoration: none;
+  display: block;
+}
+.container .main .fourth div a div {
+  margin: 5%;
+  text-align: right;
+  padding-top: 80%;
+}
+.container .main .fourth div a div p {
+  margin-left: 28%;
+  color: #fff;
+  font-size: 20px;
+}
+.container .main .fourth div a div .discription {
+  color: #B0806B;
+  font-size: 18px;
+  margin-top: -10px;
+  margin-right: 20px;
+}
+.container .main .fourth div a:hover {
+  box-shadow: 0 0 10px rgba(238, 234, 234, 0.5);
+}
+.container .main .fourth div a::before {
+  content: "";
+  background-color: #202020;
+  width: 320px;
+  opacity: 0.5;
+  position: absolute;
+  height: 370px;
+}
+.container .main .fourth div a:hover:before {
+  opacity: 0;
+}
+.container .main .fourth div .t1 {
+  background-size: cover;
+  background-color: #202020;
+}
+.container .main .fourth div .t2 {
+  background-size: cover;
+  background-color: #202020;
+}
+.container .main .fourth div .t3 {
+  background-size: cover;
+  background-color: #202020;
+}
+.container .main .fourth div .t4 {
+  background-size: cover;
+  background-color: #202020;
+}
+.container .main .fourth div .t5 {
+  background-size: cover;
+  background-color: #202020;
+}
+.container .main .fourth div .t6 {
+  background-size: cover;
+  background-color: #202020;
+}
+.container .main .fives h1 {
+  padding: 100px 0;
+  color: #D4C17F;
+  font-size: 34px;
+}
+.container .main .sixth {
+  height: 200px;
+  margin: auto;
+  margin-top: 100px;
+}
+.container .main .sixth h1 {
+  color: #D4C17F;
+  font-size: 28px;
+}
+.container .main .sixth div {
+  display: flex;
+  justify-content: space-between;
+}
+.container .main .sixth div div p {
+  color: #fff;
+}
+.container .main .sixth div form {
+  display: flex;
+}
+.container .main .sixth div form .do {
+  margin-right: 30px;
+  display: block;
+}
+.container .main .sixth div form .do p {
+  font-size: 12px;
+  width: 90%;
+  padding-top: 20px;
+  text-align: center;
+  color: #fff;
+}
+.container .main .sixth div form .do input {
+  display: block;
+  width: 290px;
+  height: 40px;
+  text-align: center;
+  border: none;
+  outline: none;
+  background: #525151;
+  color: #fff;
+}
+.container .main .sixth div form .re {
+  display: block;
+}
+.container .main .sixth div form .re button {
+  margin-top: 20px;
+  width: 296px;
+  height: 40px;
+  background-color: #D4C17F;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+.container .main .sixth div form .re input {
+  display: block;
+  width: 290px;
+  height: 40px;
+  text-align: center;
+  border: none;
+  outline: none;
+  background: #525151;
+  color: #fff;
+}
+.container .gallery h1 {
+  color: #fff;
+  padding-top: 3rem;
+}
+.container .gallery .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container .gallery .cards .card {
+  width: 23%;
+  display: block;
+  height: 300px;
+  margin: 10px;
+  background-color: #e2dbdb;
+}
+.container .services h1 {
+  color: #fff;
+  padding-top: 3rem;
+}
+
+.fon {
+  width: 100%;
+  height: 750px;
+  position: absolute;
+  background-position: center -30px;
+  background-size: 1300px 750px;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.footer {
+  background-color: #2D2D2D;
+  margin-top: 50px;
+}
+.footer div {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  padding: 30px;
+  margin: auto;
+  justify-content: space-around;
+}
+.footer div .first_section {
+  display: block;
+}
+.footer div .first_section h1 {
+  color: #cdddcd;
+}
+.footer div .first_section p {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+}
+.footer div .second_section, .footer div .third_section, .footer div .four_section {
+  display: block;
+}
+.footer div .second_section a, .footer div .third_section a, .footer div .four_section a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  margin: 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+}
