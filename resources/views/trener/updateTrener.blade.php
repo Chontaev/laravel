@@ -1,13 +1,19 @@
 @extends('admin')
 
     @section('context')
-    <form action="{{route('updateTrenerSubmit', $data->id)}}" class="col-12" method="POST">
+    <form action="{{route('updateTrenerSubmit', $data->id)}}" class="col-12" method="POST" enctype="multipart/form-data">
         @csrf
           <h4 class="border-bottom border-gray pb-3 mb-4">Создать тренера</h4>
           <!-- ФИО -->
           <div class="form-group ">
             <label for="name">ФИО тренера</label>
             <input type="name" name="name" placeholder="Введите ФИО тренера" value="{{$data->name}}" id="name" class="form-control">
+          </div>
+          <!-- Картинка -->
+          <div class="form-group ">
+            <label>Картинка для карточки</label>
+            <br>
+            <input type="file" class="img" id="img" value="{{$data->img}}" name="img">
           </div>
           <!-- Тренер -->
           <div class="form-group ">

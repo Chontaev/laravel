@@ -29,6 +29,12 @@ class TrenerController extends Controller
         $trener = new treners();
 
         $trener->name = $req->input('name');
+
+        $img = $req->img;
+        $img_new_name = time() . $img->getClientOriginalName();
+        $img ->move('img',$img_new_name);
+        $trener->img = 'img/' . $img_new_name;
+
         $trener->kindofsport = $req->input('kindofsport');
         $trener->rank = $req->input('rank');
         $trener->contacts = $req->input('contacts');
@@ -50,6 +56,12 @@ class TrenerController extends Controller
         $trener = treners::find($id);
 
         $trener->name = $req->input('name');
+
+        $img = $req->img;
+        $img_new_name = time() . $img->getClientOriginalName();
+        $img ->move('img',$img_new_name);
+        $trener->img = 'img/' . $img_new_name;
+        
         $trener->kindofsport = $req->input('kindofsport');
         $trener->rank = $req->input('rank');
         $trener->contacts = $req->input('contacts');

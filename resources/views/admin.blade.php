@@ -22,14 +22,14 @@
             {{ session('success') }}
         </div>
     @endif
-    <div class=" container d-flex justify-content-between">
-        <div class="sidebar col-3 mt-4  py-4" >
+    <div  class="container d-flex justify-content-between">
+        <div class=" sidebar col-3 mt-4  py-4" >
             <a class="btn btn-outline-dark btn-block" href="/admin">Таблица отклики</a>
             <a class="btn btn-outline-dark btn-block" href="/catalogs">Таблица секции</a>
             <a class="btn btn-outline-dark btn-block" href="/treners">Таблица тренеры</a>
             <a class="btn btn-outline-dark btn-block" href="/gallery-table">Таблица галереи</a>
         </div>
-        <div class="context col-7 pt-3 d-flex">
+        <div class="context col-8 pt-3 d-flex">
             @yield('context')
         </div>
     </div>

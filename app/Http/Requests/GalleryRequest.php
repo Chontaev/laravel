@@ -27,4 +27,10 @@ class GalleryRequest extends FormRequest
             'img'=> 'required'
         ];
     }
+    public function messages()
+    {
+        return[
+            'name.img' => 'Поле "Имя" должна быть заполнена',
+        ];
+    }
 }

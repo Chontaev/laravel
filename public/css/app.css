@@ -106,7 +106,7 @@
   justify-content: space-between;
 }
 .container .main .second div .content {
-  width: 50%;
+  width: 40%;
   display: block;
 }
 .container .main .second div .content li {
@@ -114,25 +114,33 @@
   margin: 20px;
   display: block;
 }
-.container .main .second div .image img {
-  width: 500px;
+.container .main .second .image {
+  width: 50%;
 }
-.container .main .third {
+.container .main .second .image img {
+  width: 95%;
+}
+.container .third {
   padding-top: 30px;
   border-top: 4px solid #fff;
 }
-.container .main .third h1 {
+.container .third h1 {
   color: #D4C17F;
   font-size: 34px;
 }
-.container .main .third div {
+.container .third div {
   display: flex;
   flex-wrap: wrap;
   width: 95%;
   margin: 0 auto;
   justify-content: space-between;
 }
-.container .main .third div div {
+.container .third div div:hover {
+  transform: translateX(36px);
+  transition: 0.3s;
+  filter: drop-shadow(-40px -4px 4px rgba(255, 255, 255, 0.1));
+}
+.container .third div div {
   background-color: #fff;
   width: 300px;
   height: 470px;
@@ -141,23 +149,37 @@
   border-radius: 14px;
   background-color: #222222;
 }
-.container .main .third div div h3 {
+.container .third div div h3 {
   color: #fff;
-  text-align: center;
+  margin: auto;
 }
-.container .main .third div div p {
+.container .third div div p {
   color: white;
   padding: 20px;
 }
-.container .main .third div div img {
-  margin: 4%;
-  color: antiquewhite;
+.container .third div div .cat_img {
+  height: 200px;
   width: 96%;
+}
+.container .third div div section {
+  width: 96%;
+  height: 200px;
+  position: absolute;
+  padding: 0;
+  margin: 2%;
+  border-radius: 0;
+  background-color: #202020;
+  opacity: 0.7;
+}
+.container .third div div img {
+  margin: 2%;
+  color: antiquewhite;
+  height: 300px;
   display: block;
   justify-content: center;
   height: 150px;
 }
-.container .main .third div div button {
+.container .third div div button {
   width: 200px;
   height: 30px;
   display: block;
@@ -171,53 +193,58 @@
   outline: none;
   border: none;
 }
-.container .main .third div div:hover {
-  transform: translateX(36px);
-  transition: 0.3s;
-  filter: drop-shadow(-40px -4px 4px rgba(255, 255, 255, 0.1));
-}
-.container .main .fourth {
+.container .fourth {
   margin-top: 100px;
   border-top: 4px solid #fff;
 }
-.container .main .fourth h1 {
+.container .fourth h1 {
   color: #D4C17F;
   font-size: 34px;
 }
-.container .main .fourth div {
+.container .fourth div {
   display: flex;
   flex-wrap: wrap;
   width: 96%;
   justify-content: space-between;
   margin: auto;
 }
-.container .main .fourth div a {
+.container .fourth div a {
   width: 320px;
   height: 370px;
   margin-top: 100px;
   text-decoration: none;
   display: block;
 }
-.container .main .fourth div a div {
-  margin: 5%;
+.container .fourth div a div {
   text-align: right;
-  padding-top: 80%;
 }
-.container .main .fourth div a div p {
+.container .fourth div a div .trener_img {
+  width: 320px;
+  height: 370px;
+  position: absolute;
+  z-index: 0;
+  padding: 0;
+  margin: 0;
+}
+.container .fourth div a div p {
   margin-left: 28%;
+  padding-top: 80%;
   color: #fff;
   font-size: 20px;
+  z-index: 1;
 }
-.container .main .fourth div a div .discription {
+.container .fourth div a div .discription {
   color: #B0806B;
+  padding: 0;
   font-size: 18px;
-  margin-top: -10px;
-  margin-right: 20px;
+  margin-top: 10px;
+  margin-right: 40px;
+  margin-left: 50%;
 }
-.container .main .fourth div a:hover {
+.container .fourth div a:hover {
   box-shadow: 0 0 10px rgba(238, 234, 234, 0.5);
 }
-.container .main .fourth div a::before {
+.container .fourth div a::before {
   content: "";
   background-color: #202020;
   width: 320px;
@@ -225,69 +252,45 @@
   position: absolute;
   height: 370px;
 }
-.container .main .fourth div a:hover:before {
+.container .fourth div a:hover:before {
   opacity: 0;
 }
-.container .main .fourth div .t1 {
-  background-size: cover;
-  background-color: #202020;
-}
-.container .main .fourth div .t2 {
-  background-size: cover;
-  background-color: #202020;
-}
-.container .main .fourth div .t3 {
-  background-size: cover;
-  background-color: #202020;
-}
-.container .main .fourth div .t4 {
-  background-size: cover;
-  background-color: #202020;
-}
-.container .main .fourth div .t5 {
-  background-size: cover;
-  background-color: #202020;
-}
-.container .main .fourth div .t6 {
-  background-size: cover;
-  background-color: #202020;
-}
-.container .main .fives h1 {
+.container .fives h1 {
   padding: 100px 0;
   color: #D4C17F;
   font-size: 34px;
 }
-.container .main .sixth {
+.container .sixth {
   height: 200px;
   margin: auto;
   margin-top: 100px;
 }
-.container .main .sixth h1 {
+.container .sixth h1 {
   color: #D4C17F;
   font-size: 28px;
 }
-.container .main .sixth div {
+.container .sixth div {
   display: flex;
   justify-content: space-between;
 }
-.container .main .sixth div div p {
+.container .sixth div div p {
   color: #fff;
 }
-.container .main .sixth div form {
+.container .sixth div form {
   display: flex;
 }
-.container .main .sixth div form .do {
+.container .sixth div form .do {
   margin-right: 30px;
   display: block;
 }
-.container .main .sixth div form .do p {
+.container .sixth div form .do p {
   font-size: 12px;
   width: 90%;
   padding-top: 20px;
   text-align: center;
   color: #fff;
 }
-.container .main .sixth div form .do input {
+.container .sixth div form .do input {
   display: block;
   width: 290px;
   height: 40px;
@@ -297,10 +300,10 @@
   background: #525151;
   color: #fff;
 }
-.container .main .sixth div form .re {
+.container .sixth div form .re {
   display: block;
 }
-.container .main .sixth div form .re button {
+.container .sixth div form .re button {
   margin-top: 20px;
   width: 296px;
   height: 40px;
@@ -309,7 +312,7 @@
   border: none;
   outline: none;
 }
-.container .main .sixth div form .re input {
+.container .sixth div form .re input {
   display: block;
   width: 290px;
   height: 40px;
@@ -319,23 +322,25 @@
   background: #525151;
   color: #fff;
 }
-.container .gallery h1 {
+
+.gallery h1 {
   color: #fff;
   padding-top: 3rem;
 }
-.container .gallery .cards {
+.gallery .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.container .gallery .cards .card {
+.gallery .cards .card {
   width: 23%;
   display: block;
   height: 300px;
   margin: 10px;
   background-color: #e2dbdb;
 }
-.container .services h1 {
+
+.services h1 {
   color: #fff;
   padding-top: 3rem;
 }

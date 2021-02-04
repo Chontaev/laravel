@@ -25,6 +25,7 @@ class TrenerRequest extends FormRequest
     {
         return [
             'name'=> 'required|min:3|max:40',
+            'img'=> 'required',
             'kindofsport'=> 'required|min:3|max:50',
             'rank'=> 'required|min:3|max:100',
             'contacts'=> 'required|min:3|max:50',

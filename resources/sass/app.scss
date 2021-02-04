@@ -107,7 +107,7 @@
         align-items: center;
         justify-content: space-between;
         .content{
-          width: 50%;
+          width: 40%;
           display: block;
           li{
             color: #fff;
@@ -115,11 +115,14 @@
             display: block;
           }
         }
-        .image{
-          img{
-            width: 500px;
-          }
         }
+        .image{
+            width: 50%;
+            img{
+              width: 95%;
+            }
+        }
+
       }
     }
     .third{ 
@@ -135,6 +138,11 @@
         width: 95%;
         margin: 0 auto;
         justify-content: space-between;
+        div:hover{
+          transform: translateX(36px);
+          transition: .3s;
+          filter: drop-shadow(-40px -4px 4px rgba(255, 255, 255, .1));
+      }
         div{
           background-color: #fff;
           width: 300px;
@@ -145,16 +153,30 @@
           background-color: #222222;
           h3{
             color: #fff;
-            text-align: center;
+            margin:auto;
           }
           p{
             color: white;
             padding: 20px;
           }
-          img{
-            margin: 4%;
-            color: antiquewhite;
+          .cat_img{
+            height: 200px;
             width: 96%;
+          }
+          section{
+            width: 96%; 
+            height:200px; 
+            position:absolute; 
+            padding:0; 
+            margin:2%; 
+            border-radius: 0; 
+            background-color: #202020;
+            opacity:.7;
+          }
+          img{
+            margin: 2%;
+            color: antiquewhite;
+            height: 300px;
             display: block;
             justify-content: center;
             height: 150px;
@@ -173,11 +195,6 @@
             outline: none;
             border:none;
           }
-        }
-        div:hover{
-            transform: translateX(36px);
-            transition: .3s;
-            filter: drop-shadow(-40px -4px 4px rgba(255, 255, 255, .1));
         }
       }
     }
@@ -201,19 +218,28 @@
           text-decoration: none;
           display: block;
           div{
-            margin: 5%;
             text-align:right;
-            padding-top: 80%;
+            .trener_img{
+              width: 320px; 
+              height: 370px; 
+              position:absolute; 
+              z-index:0; padding:0; 
+              margin:0;
+            }
             p{
               margin-left: 28%;
+              padding-top: 80%;
               color: #fff;
               font-size: 20px;
+              z-index: 1;
             }
             .discription{
               color: #B0806B;
+              padding: 0;
               font-size: 18px;
-              margin-top: -10px;
-              margin-right: 20px;
+              margin-top: 10px;
+              margin-right: 40px;
+              margin-left:50%;
             }
           }
         }
@@ -230,35 +256,6 @@
         }
         a:hover:before{
           opacity: 0;
-        }
-        .t1{
-          background-size: cover;
-          background-color: #202020;
-        }
-        
-        .t2{
-          background-size: cover;
-          background-color: #202020;
-        }
-        
-        .t3{
-          background-size: cover;
-          background-color: #202020;
-        }
-        
-        .t4{
-          background-size: cover;
-          background-color: #202020;
-        }
-        
-        .t5{
-          background-size: cover;
-          background-color: #202020;
-        }
-        
-        .t6{
-          background-size: cover;
-          background-color: #202020;
         }
       }
     }
@@ -357,7 +354,6 @@
     color: #fff;
     padding-top: 3rem;
   }
-}
 }
 .fon{
   width: 100%;

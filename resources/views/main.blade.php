@@ -28,16 +28,13 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis sint quaerat qui quibusdam dolore tempora earum suscipit, hic fugiat, voluptate quisquam laboriosam laudantium.
                      </li>
                      <li>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dignissimos velit repellat voluptatem minus possimus? Id magnam iure, amet libero, impedit ipsam omnis voluptatem iusto dolore reiciendis molestias rerum? Ad.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis sint quaerat qui quibusdam dolore tempora earum suscipit, hic fugiat, voluptate quisquam laboriosam laudantium.
                      </li>
                      <li>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, facilis labore neque minima iure, voluptatibus modi expedita dicta ad praesentium voluptate atque. Porro error sapiente impedit quos?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis sint quaerat qui quibusdam dolore tempora earum suscipit, hic fugiat, voluptate quisquam laboriosam laudantium.
                      </li>
                      <li>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores, in cumque aliquid magni officiis quidem eaque nihil quaerat earum nisi deleniti ratione vel eligendi vitae facere praesentium error recusandae a optio alias laboriosam. Voluptatem veritatis ipsum, laudantium non reprehenderit iure provident aperiam rem.
-                     </li>
-                     <li>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, asperiores laboriosam officia, dolor consectetur, in ducimus dolore rem quos reiciendis corporis. Aliquam?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis sint quaerat qui quibusdam dolore tempora earum suscipit, hic fugiat, voluptate quisquam laboriosam laudantium.
                      </li>
                   </div>
                   <div class="image">
@@ -48,83 +45,29 @@
             <div class="third">
                <h1>Категории</h1>
                <div>
+                  @foreach($cat as $el)
                   <div>
-                     <img src="https://www.flaticon.com/svg/vstatic/svg/2119/2119034.svg?token=exp=1611002873~hmac=8bd7dbe65eb89d7ae634e0a499b2e422" alt="">
-                     <h3>Restling</h3>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste beatae qui, iure possimus natus quidem molestias esse odio tempora!</p>
+                     <section></section>
+                     <img class="cat_img" src="{{asset($el->img)}}" alt="">
+                     <h3>{{$el->title}}</h3>
+                     <p>{{$el->discript}}</p>
                      <button>Подробнее</button>
                   </div>
-                  <div>
-                     <img src="https://www.flaticon.com/svg/vstatic/svg/2119/2119060.svg?token=exp=1611003202~hmac=270e4072908119bb5fda9244858038ea" alt="">
-                     <h3>Fitness</h3>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste beatae qui, iure possimus natus quidem molestias esse odio tempora!</p>
-                     <button>Подробнее</button>
-                  </div>
-                  <div>
-                     <img src="https://www.flaticon.com/svg/vstatic/svg/2119/2119053.svg?token=exp=1611003354~hmac=64162e572c23a6a9aa4c1f1367bd517f" alt="">
-                     <h3>Crossfit</h3>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste beatae qui, iure possimus natus quidem molestias esse odio tempora!</p>
-                     <button>Подробнее</button>
-                  </div>
-                  <div>
-                     <img src="https://www.flaticon.com/svg/vstatic/svg/2119/2119051.svg?token=exp=1611002879~hmac=9242df375096180c379c30851074f759" alt="">
-                     <h3>Powerlifting</h3>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste beatae qui, iure possimus natus quidem molestias esse odio tempora!</p>
-                     <button>Подробнее</button>
-                  </div>
-                  <div>
-                     <img src="https://www.flaticon.com/svg/vstatic/svg/2119/2119020.svg?token=exp=1611003118~hmac=f6b51f32b0918e48c947bdea53abe683" alt="">
-                     <h3>Bodybuilding</h3>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste beatae qui, iure possimus natus quidem molestias esse odio tempora!</p>
-                     <button>Подробнее</button>
-                  </div>
-                  <div>
-                     <img src="https://www.flaticon.com/svg/vstatic/svg/2057/2057748.svg?token=exp=1611004118~hmac=6646d9786b6a1630cc32ac74b277d184" alt="">
-                     <h3>Armrestling</h3>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste beatae qui, iure possimus natus quidem molestias esse odio tempora!</p>
-                     <button>Подробнее</button>
-                  </div>
+                  @endforeach
                </div>
             </div>
             <div class="fourth" id="treners">
                <h1 class="h1">Тренера</h1>
                <div>
-                  <a href="" class="t1">
+               @foreach($data as $el)
+                  <a href="" > 
                      <div>
-                        <p>Анна Ахматова</p>
-                        <p class="discription td1">Фитнес тренер для девушек</p>
+                     <img class="trener_img" src="{{asset($el->img)}}" alt="">
+                        <p  style="color:#fff">{{$el->name}}</p>
+                        <p class="discription">{{$el->kindofsport}}</p>
                      </div>
                   </a>
-                  <a href="" class="t2">
-                     <div>
-                        <p>Ким Юлия</p>
-                        <p class="discription">Тренер по бодиблидингу</p>
-                     </div>
-                  </a>
-                  <a href="" class="t3">
-                  <div>
-                        <p>Генадий Обломов</p>
-                        <p class="discription">Тренер по Пауерлифтину</p>
-                     </div>
-                  </a>
-                  <a href="" class="t4">
-                     <div>
-                        <p>Гарик Саркисян</p>
-                        <p class="discription">Фитнес и рестлинг тренер</p>
-                     </div>
-                  </a>
-                  <a href="" class="t5">
-                     <div>
-                        <p>Артур Досмухамедлв</p>
-                        <p class="discription">Тренер по армрестлингу</p>
-                     </div>
-                  </a>
-                  <a href="" class="t6">
-                     <div>
-                        <p>Маряна Кравец</p>
-                        <p class="discription">Фитнес тренер</p>
-                     </div>
-                  </a>
+               @endforeach
                </div>
             </div>
             <div class="fives">

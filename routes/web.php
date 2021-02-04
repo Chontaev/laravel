@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 //Site for clients
 
-Route::get('/', function () { return view('main'); });
+Route::get('/', [App\Http\Controllers\MainController::class, 'getTreners'])->name('main');
 
 Route::get('/gallery', function () { return view('gallery'); });
 
@@ -15,11 +15,7 @@ Auth::routes(['register' => false]);
 
 //AdminPanel
 
-Route::get('/admin', [App\Http\Controllers\CheckController::class, 'index'])->name('admin');
-
-Route::get('/catalogs', function () { return view('admin/catalogs'); })->middleware('auth')->name('showCatalogs');
-
-
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
 
 //Таблица Тренер
 
@@ -62,12 +58,53 @@ Route::get(
 //Таблица Галлерея
 
 Route::get(
-    '/gallery-table', function () { return view('admin/gallery-table');})->middleware('auth')->name('showGalleryTable');
+    '/gallery-table', 'App\Http\Controllers\GalleryController@showAll'
+    )->name('galleryShowAll');
+
+Route::get(
+    '/createGallery','App\Http\Controllers\GalleryController@createGallery'
+    )->name('createGallery');
+
+Route::post(
+    '/create-gallery','App\Http\Controllers\GalleryController@post'
+    )->name('createGallerySubmit');
+
+Route::get(
+    '/gallery/{id}/delete',
+    'App\Http\Controllers\GalleryController@deleteGallery'
+    )->name("deleteGallery");
 
 
-Route::post('/create-gallery','App\Http\Controllers\GalleryController@createGallery')->name('createGallery');
+//Категория секций
+Route::get(
+    '/createCatalog','App\Http\Controllers\CatalogController@createCatalog'
+    )->name('createCatalog');
 
-Route::post('/create-catalog','App\Http\Controllers\CatalogController@createCatalog')->name('createCatalog');
+Route::get(
+    '/catalogs','App\Http\Controllers\CatalogController@showAll'
+)->name('showAllCatalogs');
 
+Route::get(
+    '/catalogs/{id}',
+    'App\Http\Controllers\CatalogController@showOne'
+    )->name("catalogShowOne");
 
+Route::post(
+    '/createGallerySubmit','App\Http\Controllers\CatalogController@createCatalogSubmit'
+    )->name('createCatalogSubmit');
 
+  
+Route::post(
+    '/catalogs/{id}/update',
+    'App\Http\Controllers\CatalogController@updateCatalogSubmit'
+    )->name("updateCatalogSubmit");
+
+Route::get(
+    '/catalogs/{id}/update',
+    'App\Http\Controllers\CatalogController@updateCatalog'
+    )->name("updateCatalog");
+ 
+Route::get(
+    '/catalogs/{id}/delete',
+    'App\Http\Controllers\CatalogController@deleteCatalog'
+    )->name("deleteCatalog");
