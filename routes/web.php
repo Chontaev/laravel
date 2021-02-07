@@ -7,9 +7,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\MainController::class, 'getTreners'])->name('main');
 
-Route::get('/gallery', function () { return view('gallery'); });
+Route::get('/gallery', 'App\Http\Controllers\MainController@get')->name('gallery');
 
-Route::get('/services', function () { return view('services'); });
+Route::get('/details/{id}', 'App\Http\Controllers\MainController@details')->name('details');
+
+Route::get('/details1/{id}', 'App\Http\Controllers\MainController@details1')->name('details1');
 
 Auth::routes(['register' => false]);
 

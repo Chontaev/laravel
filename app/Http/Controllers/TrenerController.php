@@ -8,6 +8,10 @@ use App\Models\treners;
 
 class TrenerController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function showAll(){
         $this->middleware('auth');
@@ -51,7 +55,6 @@ class TrenerController extends Controller
     }
 
     public function updateTrenerSubmit($id,TrenerRequest  $req) {
-        $this->middleware('auth');
 
         $trener = treners::find($id);
 

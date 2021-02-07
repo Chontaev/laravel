@@ -15,6 +15,42 @@
   font-family: "Raleway", sans-serif;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding-top: 30px;
+  justify-content: space-between;
+}
+.header .logo {
+  z-index: 1002;
+  display: block;
+  background-color: #ff0000;
+  width: 130px;
+  height: 40px;
+}
+.header .navbar {
+  display: flex;
+  align-items: flex-end;
+  z-index: 1000;
+}
+.header .navbar a {
+  align-items: center;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 12px;
+  line-height: 140.62%;
+  display: block;
+  margin: 0 15px;
+  color: inherit;
+  width: 50px;
+  text-decoration: none;
+}
+.header .navbar a:last-child {
+  width: 50px;
+}
+
 .container {
   width: 80%;
   margin: auto;
@@ -24,8 +60,6 @@
   align-items: center;
   margin: auto;
   padding-top: 30px;
-  position: -webkit-sticky;
-  position: sticky;
   justify-content: space-between;
 }
 .container .header .logo {
@@ -36,7 +70,6 @@
   height: 40px;
 }
 .container .header .navbar {
-  padding-right: 15%;
   display: flex;
   align-items: flex-end;
   z-index: 1000;
@@ -54,12 +87,22 @@
   width: 50px;
   text-decoration: none;
 }
+.container .header .navbar a:last-child {
+  width: 50px;
+}
 .container .main .first {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
   display: block;
-  height: 720px;
+  height: 100vh;
+  background-image: url("/img/fon.png");
 }
 .container .main .first .context {
-  width: 60%;
+  text-align: center;
   margin: auto;
   margin-top: 150px;
   vertical-align: center;
@@ -72,7 +115,7 @@
   z-index: 1000;
   font-style: italic;
   font-weight: 600;
-  font-size: 102px;
+  font-size: 600%;
   letter-spacing: 12px;
 }
 .container .main .first .context h1 span {
@@ -82,23 +125,23 @@
   margin-top: 30px;
   text-align: center;
   font-style: italic;
-  font-size: 40px;
+  font-size: 200%;
   color: #fff;
 }
 .container .main .first .context p::after {
   content: "";
   display: block;
-  margin-top: 20px;
-  border-bottom: 3px solid #fff;
+  width: 50%;
+  border-bottom: 1% solid #fff;
 }
 .container .main .second {
   padding-top: 2rem;
-  height: 650px;
+  height: 100vh;
   border-top: 4px solid #fff;
 }
 .container .main .second h1 {
   color: #D4C17F;
-  font-size: 34px;
+  font-size: 150%;
 }
 .container .main .second div {
   display: flex;
@@ -106,41 +149,43 @@
   justify-content: space-between;
 }
 .container .main .second div .content {
-  width: 40%;
+  width: 50%;
   display: block;
 }
 .container .main .second div .content li {
   color: #fff;
   margin: 20px;
   display: block;
+  font-size: 100%;
 }
-.container .main .second .image {
+.container .main .second div .image {
   width: 50%;
 }
-.container .main .second .image img {
+.container .main .second div .image img {
   width: 95%;
 }
-.container .third {
+.container .main .third {
   padding-top: 30px;
   border-top: 4px solid #fff;
 }
-.container .third h1 {
+.container .main .third h1 {
+  margin-top: 2rem;
   color: #D4C17F;
   font-size: 34px;
 }
-.container .third div {
+.container .main .third div {
   display: flex;
   flex-wrap: wrap;
-  width: 95%;
-  margin: 0 auto;
   justify-content: space-between;
+  width: 95%;
+  margin: auto;
 }
-.container .third div div:hover {
+.container .main .third div div:hover {
   transform: translateX(36px);
   transition: 0.3s;
   filter: drop-shadow(-40px -4px 4px rgba(255, 255, 255, 0.1));
 }
-.container .third div div {
+.container .main .third div div {
   background-color: #fff;
   width: 300px;
   height: 470px;
@@ -149,19 +194,19 @@
   border-radius: 14px;
   background-color: #222222;
 }
-.container .third div div h3 {
+.container .main .third div div h3 {
   color: #fff;
   margin: auto;
 }
-.container .third div div p {
+.container .main .third div div p {
   color: white;
   padding: 20px;
 }
-.container .third div div .cat_img {
+.container .main .third div div .cat_img {
   height: 200px;
   width: 96%;
 }
-.container .third div div section {
+.container .main .third div div section {
   width: 96%;
   height: 200px;
   position: absolute;
@@ -171,7 +216,7 @@
   background-color: #202020;
   opacity: 0.7;
 }
-.container .third div div img {
+.container .main .third div div img {
   margin: 2%;
   color: antiquewhite;
   height: 300px;
@@ -179,7 +224,7 @@
   justify-content: center;
   height: 150px;
 }
-.container .third div div button {
+.container .main .third div div a {
   width: 200px;
   height: 30px;
   display: block;
@@ -189,36 +234,40 @@
   border-radius: 10px;
   color: #fff;
   font-size: 19px;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
   font-weight: bold;
   outline: none;
   border: none;
 }
-.container .fourth {
+.container .main .fourth {
   margin-top: 100px;
   border-top: 4px solid #fff;
 }
-.container .fourth h1 {
+.container .main .fourth h1 {
+  margin-top: 2rem;
   color: #D4C17F;
   font-size: 34px;
 }
-.container .fourth div {
+.container .main .fourth div {
   display: flex;
   flex-wrap: wrap;
   width: 96%;
   justify-content: space-between;
   margin: auto;
 }
-.container .fourth div a {
+.container .main .fourth div a {
   width: 320px;
   height: 370px;
   margin-top: 100px;
   text-decoration: none;
   display: block;
 }
-.container .fourth div a div {
+.container .main .fourth div a div {
   text-align: right;
 }
-.container .fourth div a div .trener_img {
+.container .main .fourth div a div .trener_img {
   width: 320px;
   height: 370px;
   position: absolute;
@@ -226,14 +275,14 @@
   padding: 0;
   margin: 0;
 }
-.container .fourth div a div p {
+.container .main .fourth div a div p {
   margin-left: 28%;
   padding-top: 80%;
   color: #fff;
   font-size: 20px;
   z-index: 1;
 }
-.container .fourth div a div .discription {
+.container .main .fourth div a div .discription {
   color: #B0806B;
   padding: 0;
   font-size: 18px;
@@ -241,10 +290,10 @@
   margin-right: 40px;
   margin-left: 50%;
 }
-.container .fourth div a:hover {
+.container .main .fourth div a:hover {
   box-shadow: 0 0 10px rgba(238, 234, 234, 0.5);
 }
-.container .fourth div a::before {
+.container .main .fourth div a::before {
   content: "";
   background-color: #202020;
   width: 320px;
@@ -252,107 +301,74 @@
   position: absolute;
   height: 370px;
 }
-.container .fourth div a:hover:before {
+.container .main .fourth div a:hover:before {
   opacity: 0;
 }
-.container .fives h1 {
+.container .main .fives h1 {
   padding: 100px 0;
   color: #D4C17F;
   font-size: 34px;
 }
-.container .sixth {
-  height: 200px;
+.container .main .sixth {
   margin: auto;
   margin-top: 100px;
 }
-.container .sixth h1 {
+.container .main .sixth h1 {
+  margin-top: 2rem;
   color: #D4C17F;
   font-size: 28px;
 }
-.container .sixth div {
+.container .main .sixth form {
   display: flex;
-  justify-content: space-between;
-}
-.container .sixth div div p {
-  color: #fff;
-}
-.container .sixth div form {
-  display: flex;
-}
-.container .sixth div form .do {
-  margin-right: 30px;
-  display: block;
-}
-.container .sixth div form .do p {
-  font-size: 12px;
-  width: 90%;
-  padding-top: 20px;
+  flex-wrap: wrap;
   text-align: center;
-  color: #fff;
+  margin-top: 2rem;
 }
-.container .sixth div form .do input {
+.container .main .sixth form div {
+  font-size: 8px;
+  color: #fff;
+  margin: 2%;
+}
+.container .main .sixth form div input {
   display: block;
-  width: 290px;
   height: 40px;
   text-align: center;
   border: none;
-  outline: none;
+  overflow: hidden;
   background: #525151;
   color: #fff;
 }
-.container .sixth div form .re {
-  display: block;
-}
-.container .sixth div form .re button {
-  margin-top: 20px;
-  width: 296px;
+.container .main .sixth form div button {
   height: 40px;
+  width: 100%;
   background-color: #D4C17F;
   text-align: center;
   border: none;
   outline: none;
 }
-.container .sixth div form .re input {
-  display: block;
-  width: 290px;
-  height: 40px;
-  text-align: center;
-  border: none;
-  outline: none;
-  background: #525151;
-  color: #fff;
-}
-
-.gallery h1 {
+.container .gallery h1 {
   color: #fff;
   padding-top: 3rem;
 }
-.gallery .cards {
+.container .gallery .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
 }
-.gallery .cards .card {
-  width: 23%;
+.container .gallery .cards .card {
+  width: 300px;
   display: block;
   height: 300px;
   margin: 10px;
   background-color: #e2dbdb;
 }
-
-.services h1 {
-  color: #fff;
-  padding-top: 3rem;
-}
-
-.fon {
-  width: 100%;
-  height: 750px;
-  position: absolute;
-  background-position: center -30px;
-  background-size: 1300px 750px;
-  background-repeat: no-repeat;
-  z-index: -1;
+.container .gallery .cards img {
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .footer {
@@ -362,7 +378,6 @@
 .footer div {
   font-family: "Raleway", sans-serif;
   display: flex;
-  padding: 30px;
   margin: auto;
   justify-content: space-around;
 }
@@ -371,9 +386,11 @@
 }
 .footer div .first_section h1 {
   color: #cdddcd;
+  font-size: 100%;
 }
 .footer div .first_section p {
   color: #fff;
+  font-size: 100%;
   font-family: "Raleway", sans-serif;
 }
 .footer div .second_section, .footer div .third_section, .footer div .four_section {
@@ -383,8 +400,94 @@
   display: block;
   text-decoration: none;
   color: #fff;
-  margin: 10px;
+  margin: 5px;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   font-weight: lighter;
+}
+
+@media (max-width: 854px) {
+  .container {
+    width: 94%;
+  }
+  .container .header .navbar {
+    z-index: 1000;
+  }
+  .container .header .navbar a {
+    align-items: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 10px;
+    margin-top: 12px;
+    display: block;
+    margin: 0 5px;
+    color: #fff;
+    width: 40px;
+    text-decoration: none;
+  }
+  .container .main .first .context {
+    align-items: center;
+  }
+  .container .main .first .context h1 {
+    font-size: 300%;
+    letter-spacing: 7px;
+  }
+  .container .main .first .context p {
+    font-size: 150%;
+  }
+  .container .main .second {
+    padding-top: 2rem;
+    height: 100vh;
+    border-top: 2px solid #fff;
+  }
+  .container .main .second h1 {
+    font-size: 24px;
+    margin-right: 2rem;
+  }
+  .container .main .second .content {
+    width: 50%;
+  }
+  .container .main .second .content li {
+    color: #fff;
+    font-size: 12px;
+  }
+  .container .main .second .image {
+    width: 50%;
+  }
+  .container .main .second .image img {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .container .main .second div {
+    display: block;
+  }
+
+  .container .main .second div .content {
+    width: 100%;
+  }
+
+  .container .main .second div .content li {
+    font-size: 120%;
+  }
+
+  .container .main .second div .image {
+    display: none;
+  }
+
+  .container .main .fourth div {
+    justify-content: center;
+  }
+
+  .footer div .first_section {
+    display: none;
+  }
+
+  .footer div .second_section {
+    width: 50%;
+  }
+
+  .container .main .sixth div form {
+    display: block;
+  }
 }

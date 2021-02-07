@@ -17,7 +17,7 @@
           @foreach($data as $el)
             <tr>
               <td>{{$el->title}}</td>
-              <td><img style="width: 50px;" src="{{ asset($el->img) }}" alt=""></td>
+              <td><img style="width: 50px;" src="{{ $el->img }}" alt=""></td>
               <td>{{ $el->price }}</td>
               <td><a href="{{route('catalogShowOne', $el->id)}}">Перейти</a></td>
             </tr>

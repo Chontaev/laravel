@@ -13,18 +13,11 @@
       <div class="gallery">
         <h1>Галлерея</h1>
         <div class="cards">
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
+          <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $el): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+          <a href="" class="card">
+            <img src="<?php echo e(asset($el->img)); ?>" alt="">
+          </a>
+          <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
       </div>
     </div>

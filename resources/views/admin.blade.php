@@ -24,7 +24,7 @@
     @endif
     <div  class="container d-flex justify-content-between">
         <div class=" sidebar col-3 mt-4  py-4" >
-            <a class="btn btn-outline-dark btn-block" href="/admin">Таблица отклики</a>
+            <a class="btn btn-outline-dark btn-block" href="/admin">Редактор 2 блока</a>
             <a class="btn btn-outline-dark btn-block" href="/catalogs">Таблица секции</a>
             <a class="btn btn-outline-dark btn-block" href="/treners">Таблица тренеры</a>
             <a class="btn btn-outline-dark btn-block" href="/gallery-table">Таблица галереи</a>

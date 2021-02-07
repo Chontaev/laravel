@@ -13,18 +13,11 @@
       <div class="gallery">
         <h1>Галлерея</h1>
         <div class="cards">
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
-          <a href="" class="card"></a>
+          @foreach($data as $el)
+          <a href="" class="card">
+            <img src="{{asset($el->img)}}" alt="">
+          </a>
+          @endforeach
         </div>
       </div>
     </div>

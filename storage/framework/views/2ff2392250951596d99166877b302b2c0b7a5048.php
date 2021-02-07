@@ -17,7 +17,7 @@
           <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $el): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <tr>
               <td><?php echo e($el->title); ?></td>
-              <td><img style="width: 50px;" src="<?php echo e(asset($el->img)); ?>" alt=""></td>
+              <td><img style="width: 50px;" src="<?php echo e($el->img); ?>" alt=""></td>
               <td><?php echo e($el->price); ?></td>
               <td><a href="<?php echo e(route('catalogShowOne', $el->id)); ?>">Перейти</a></td>
             </tr>

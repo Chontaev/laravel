@@ -51,7 +51,7 @@
                      <img class="cat_img" src="<?php echo e(asset($el->img)); ?>" alt="">
                      <h3><?php echo e($el->title); ?></h3>
                      <p><?php echo e($el->discript); ?></p>
-                     <button>Подробнее</button>
+                     <a href="<?php echo e(route('details1', $el->id)); ?>">Подробнее</a>
                   </div>
                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                </div>
@@ -60,7 +60,7 @@
                <h1 class="h1">Тренера</h1>
                <div>
                <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $el): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                  <a href="" > 
+                  <a href="<?php echo e(route('details', $el->id)); ?>" > 
                      <div>
                      <img class="trener_img" src="<?php echo e(asset($el->img)); ?>" alt="">
                         <p  style="color:#fff"><?php echo e($el->name); ?></p>
@@ -88,24 +88,18 @@
             </div>
             <div class="sixth">
                <h1>Хотите записаться?</h1>
-               <div>
+               <form>
                   <div>
-                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, fuga quisquam delectus in non ratione maxime recusandae consectetur voluptatum, minus modi saepe accusamus dolore aut dicta ab rerum, reprehenderit dolor!
-                     </p>
+                     <input type="name" placeholder="Вашe имя">
                   </div>
-                  <form>
-                  <div class="do">
-                        <input type="name" placeholder="Вашe имя">
-                        <p>*Мы никому не передаем ваши данные. <br> И не сохраняем ваш номер в базу.
-                        </p>
-                     </div>
-                     <div class="re">
-                        <input type="phone" placeholder="Ваш телефон">
-                        <button>Отправить</button>
-                     </div>
-                  </form>
-               </div>
+                  <div>
+                     <input type="phone" placeholder="Ваш телефон">
+                  </div>
+                  <div> <button>Отправить</button></div>
+                  <div>
+                     *Мы никому не передаем ваши данные. <br> И не сохраняем ваш номер в базу.
+                  </div>
+               </form>
             </div>
          </div>
       </div>
@@ -119,14 +113,9 @@
             </div>
             <div class="second_section">
                <a>О зале</a>
-               <a>Район</a>
                <a>Католог секций</a>
                <a>Тренера</a>
-            </div>
-            <div class="third_section">
                <a>Галерея</p>
-               <a>Перечнь услуг</p>
-               <a>Контакты</a>
             </div>
             <div class="four_section">
                <a>Адрес: Фитнес Центр Мега Спорт, Бишкек, Киргизия</a>
